@@ -18,7 +18,7 @@ module.exports = (app) => {
     passport.authenticate("google"),
     (req, res) => {
       console.log("The user has been authenticated");
-      res.redirect(process.env.FRONTEND);
+       res.redirect(`${process.env.FRONTEND}/api/current`);
     }
   );
 
